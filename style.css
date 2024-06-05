@@ -1,0 +1,49 @@
+body{
+
+    /*place-items: center; se utiliza para alinear*/
+    /* display: grid; /* se utiliza para centrar de mejor manera*/
+   /* background-color: rgb(209, 209, 209);
+  /*  width: 50px;   /* Ancho específico */
+  /* height: auto;  /* Altura específica */
+  display:grid;  place-items: center; /* Centra horizontal y verticalmente */
+  background-color: rgb(209, 209, 209);
+  height: 100vh; /* Asegura que el grid ocupe toda la altura de la ventana */
+  margin: 0; /* Elimina cualquier margen predeterminado */
+  
+}
+
+
+.carter-deqr{
+  text-align: center;
+  height: fit-content; /* se utiliza para generar ese bordeado con forma de tarjeta*/
+  width: 270px; /* se utiliza para colocar la imagen segun su tamaño dentro del cuadro*/
+  background: rgb(255, 255, 255);
+  border-radius: 20px; /* se utiliza para medir cuanto vordeado se va a colocar*/
+  /*justify-items: center; se utiliza para centrar ya sea texto o imagenes*/
+  box-shadow: 1em 1em 35px #333131; /* se utiliza para poner el sombrado del borde*/
+} 
+
+.container-qr {
+    height: 250px;
+    padding: 3%; /* para medir el espacio del contenido al borde o de otro objeto*/
+  }
+  .img1{
+    max-width: 100%; /* se utiliza para medir el tamaño de la imagen */
+    height: 100%;/* se para medir la altura de la imagen */
+    border-radius: 10px;/* se para colocar el nivel del bordeado */
+  }
+
+
+  .card-text{
+    display: inline-block;
+  width: 80%;
+  margin: auto;
+  }
+.description{
+  text-align: center;
+    /*padding: %;/* para medir el espacio del contenido al borde o de otro objeto*/
+    margin: 8%;
+    color: #7d889e;
+    
+  
+}
