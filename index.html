@@ -1,28 +1,264 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | QR code component</title>
-<link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KingAndQueen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
 
-</head>
-<body>
-  <!--las class es para poder darle estitulo a cada linea de codigo,
-  varias lineas de codigo pueden tener la misma clase, mientras que el id 
-solo es para una cosa en especifico-->
-  <div class="carter-deqr" >
-  <div class="container-qr" >
-    <img src="images/image-qr-code.png" class="img1" alt="img-QR">
+    <!--Header de contacto-->
+
+    
+    <header class="container-fluid bg-warning d-flex justify-content-center">
+        <p class="text-dark mt-1 p-0.5 fs-5 fw-bold">Contactanos al +57 3042160888</p>
+    </header>
+
+
+    <!--Nav Bar-->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" id="menu">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-gem"></i>
+          <span class="text-warning fs-5 fw-bold">KingOrQueen</span>
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="catalogo.html">Catalogo</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contactanos.html">Contactanos</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-warning" href="verano.html">Verano</a></li>
+                <li><a class="dropdown-item text-info" href="invierno.html">Invierno</a></li>
+                <li><a class="dropdown-item text-success" href="deportivo.html">Deportivo</a></li>
+                <li><a class="dropdown-item text-danger" href="urbano.html">Urbano</a></li>
+                <li><a class="dropdown-item text-warning" href="vintage.html">Vintage</a></li>
+                <li><a class="dropdown-item text-primary" href="overside.html">Overside</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!--Clase de Carrito de Compra-->
+        <div class="container-icon">
+          <div class="container-cart-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-cart"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              />
+            </svg>
+            <div class="count-products">
+              <span id="contador-productos">0</span>
+            </div>
+          </div>
+          <div class="container-cart-products hidden-cart">
+            <div class="row-product hidden"></div>
+            <div class="cart-total hidden">
+              <h3>Total:</h3>
+              <span class="total-pagar">$0</span>
+            </div>
+            <p class="cart-empty">El carrito está vacío</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        </div>
+      </div>
+    </nav>
+   
+    
+      <!--Carousel de imagenes-->
+
+      <div id="carouselExample" class="carousel slide "  data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="Img/Balenciaga.jpg" class="d-block w-100" alt="Producto 1">
+          </div>
+
+          <div class="carousel-item "data-bs-interval="3000">
+            <img src="Img/Balenciaga 3.jpg" class="d-block w-100" alt="Producto 1">
+          </div>
+
+          <div class="carousel-item "  data-bs-interval="3000">
+            <img src="Img/Balenciaga 2.jpg" class="d-block w-100" alt="Producto 1">
+          </div>
+
+          <div class="carousel-item "  data-bs-interval="3000">
+            <img src="Img/Modelos2.Zara.jpg" class="d-block w-100" alt="Producto 1">
+          </div>
+
+          <div class="carousel-item "  data-bs-interval="3000">
+            <img src="Img/Modelos4.Zara.jpg" class="d-block w-100" alt="Producto 1">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!--Inicio-->
+
+      <section class="w-50 mx-auto text-center pt-5" id="intro">
+        <h1 class="p-3 fs-2 border-top border-3 fw-bold" > <i class="bi bi-gem"></i> Viste tu estilo, vive tu pasión, sientete
+        <span class="text-warning fw-bold"> KingOrQueen</span>
+        </h1>
+      </section>
+
+
+    <!--Cards de Productos-->
+
+    <div class="row" id="ropa1">
+      <div class="col-md-3 mt-3 mb-4 ">
+        <div class="card product-card">
+          <img src="Img/Ropa/verano.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Coleccion verano</h5>
+            <p class="card-text">¡Deslúmbrate con nuestra colección de verano! Haz clic para explorar!</p>
+            <a href="verano.html" class="btn btn-primary bg-warning text-dark ">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-3 mb-4">
+        <div class="card product-card">
+          <img src="Img/Ropa/invierno.jpg" class="card-img-top" alt="Producto 2">
+          <div class="card-body">
+            <h5 class="card-title">coleccion inverno</h5>
+            <p class="card-text">¡Prepárate para el invierno con estilo! Descubre nuestra colección aquí!</p>
+            <a href="invierno.html" class="btn btn-primary bg-warning text-dark">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-3 mb-4">
+        <div class="card product-card">
+          <img src="Img/Ropa/Ropa Zara/deportivo4.jpg" class="card-img-top" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title"> Coleccion deportiva</h5>
+            <p class="card-text">"¡Potencia tu juego con nuestra colección deportiva! Explora ahora!</p>
+            <a href="deportivo.html" class="btn btn-primary bg-warning text-dark">Ver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Imagen destacada-->
+
+    <section>
+      <div class="intro-imagen">
+          <div class= "card text-bg-dark">
+              <img src="Img/Balenciaga.jpg" alt="...">
+              <div class="card-img-overlay">
+                <h5 class="card-title text-warning fw-bold">Muestra tu estilo</h5>
+                <p class="card-text">La moda es más que una tendencia, es un viaje de autodescubrimiento, <br> una <span class="text-warning fw-bold">búsqueda interminable de belleza</span>  una celebración de la diversidad que nos une en la pasarela de la vida.</p>
+                <div class="col-md-3 mt-3 mb-4 ">
+                  <div class="card product-card-intro">
+                    <img src="Img/Ropa/HoddieBlack.png" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                      <h2 class="card-title">Pantaloneta Nike</h2>
+                      <p class="card-text">Lo mejor de lo mejor</p>
+                      <span class="price">$120</span>
+                      <button href="#" class="btn btn-warning btn-add-cart">Agregar al carrito</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              </div>
+              
+      </div>
+  </section>
+
+  <!--Cards de Productos 2-->
+
+  <div class="row" id="ropa2">
+    <div class="col-md-3 mt-4 mb-4 ">
+      <div class="card product-card">
+        <img src="Img/Ropa/Ropa Zara/urban 4.jpg" class="card-img-top" alt="Producto 1">
+        <div class="card-body">
+          <h5 class="card-title">Coleccion urbana</h5>
+          <p class="card-text">¡Define tu estilo urbano con nuestra colección! Descubre más aquí!</p>
+          <a href="urbano.html" class="btn btn-primary bg-warning text-dark">Ver</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mt-4 mb-4">
+      <div class="card product-card">
+        <img src="Img/Ropa/Ropa Zara/Vestido Bandeau Punto.jpg" class="card-img-top" alt="Producto 2">
+        <div class="card-body">
+          <h5 class="card-title">Coleccion vintage</h5>
+          <p class="card-text">¡Revive la moda vintage con nuestra colección única. Explora ahora!</p>
+          <a href="vintage.html" class="btn btn-primary bg-warning text-dark">Ver</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mt-4 mb-4">
+      <div class="card product-card">
+        <img src="Img/Ropa/Ropa Zara/urban 5.jpg" class="card-img-top" alt="Producto 3">
+        <div class="card-body">
+          <h5 class="card-title">Coleccion overside</h5>
+          <p class="card-text">¡Abraza la comodidad y el estilo con nuestra colección oversize! Descubre más aquí!</p>
+          <a href="overside.html" class="btn btn-primary bg-warning text-dark">Ver</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <h class="card-text">Improve your front-end skills by building projects</h>
-  <div class="description">
-    Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
 
-</div>
-</div>
 
-</body>
+<!--<footer>-->
+
+
+<footer class="footer"> 
+  <i class="bi bi-gem text-warning"></i>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="index.html"><span class="text-warning"> Inicio</span></a></li>
+        <li class="menu__item"><a class="menu__link" href="catalogo.html"><span class="text-warning" >Catalogo</span></a></li>
+        <li class="menu__item"><a class="menu__link" href="contactanos.html"><span class="text-warning">Contactanos</span></a></li>
+        <li class="menu__item"><a class="menu__link" href="contactanos.html"><span class="text-warning ">Conocenos</span></a></li>
+  </ul>
+  <p>&copy;2024 KingOrQueen | All Rights Reserved</p>
+</footer>
+
+<script src="index.js"></script>
+
+  </body>
 </html>
